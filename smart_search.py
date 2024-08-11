@@ -458,7 +458,7 @@ class SummarizeAgent:
             {"role": "user", "content": user_message}
         ]
 
-class MindSearch:
+class SmartSearch:
     def __init__(self, api_key: str, base_url: str, model: str, max_turn: int = 10):
         self.client = OpenAI(api_key=api_key, base_url=base_url)
         self.planner = Planner(self.client, model)
@@ -466,7 +466,7 @@ class MindSearch:
         self.searcher = Searcher(self.client, model)
         self.graph = WebSearchGraph()
         self.max_turn = max_turn
-        self.logger = logging.getLogger(__name__ + ".MindSearch")
+        self.logger = logging.getLogger(__name__ + ".SmartSearch")
 
     def search(self, question: str) -> Generator[Dict, None, None]:
         self.logger.info(f"开始搜索流程: {question}")
@@ -545,11 +545,11 @@ def main():
     base_url = ""
     model = ""
 
-    mind_search = MindSearch(api_key, base_url, model)
+    smart_search = SmartSearch(api_key, base_url, model)
 
     question = "请总结2024年美国大选候选人有哪些，他们的优势劣势分别是什么"
     logger.info(f"开始处理问题: {question}")
-    for step in mind_search.search(question):
+    for step in smart_search.search(question):
         print(json.dumps(step, indent=2, ensure_ascii=False))
         logger.info(f"搜索步骤: {step['status']}")
         if step['status'] in ['Completed', 'Error', 'MaxTurnReached']:
