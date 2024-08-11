@@ -21,7 +21,7 @@ SmartSearch 是一个先进的 AI 驱动搜索系统,能够将复杂的查询分
 ## 安装
 
 1. 克隆仓库:
-git clone https://github.com/531619091/smart-search.git
+git clone https://github.com/531619091/smart_search.git
 2. 安装所需的包:
 pip install -r requirements.txt
 

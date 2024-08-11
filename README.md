@@ -1,6 +1,6 @@
 # SmartSearch
 
-[中文版 README](README_CN.md)
+[中文版 README](README CN.md)
 
 SmartSearch is an advanced AI-powered search system that breaks down complex queries into manageable sub-questions, searches for information, and synthesizes comprehensive answers.
 
@@ -21,7 +21,7 @@ SmartSearch is an advanced AI-powered search system that breaks down complex que
 ## Installation
 
 1. Clone the repository:
-git clone https://github.com/531619091/MindSearch.git
+git clone https://github.com/531619091/smart_search.git
 2. Install the required packages:
 pip install -r requirements.txt
 3. Set up your OpenAI API key as an environment variable:
