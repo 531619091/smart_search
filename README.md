@@ -1,6 +1,6 @@
 # SmartSearch
 
-[中文版 README](README CN.md)
+[中文版 README](README_CN.md)
 
 SmartSearch is an advanced AI-powered search system that breaks down complex queries into manageable sub-questions, searches for information, and synthesizes comprehensive answers.
 
